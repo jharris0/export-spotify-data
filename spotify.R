@@ -1,14 +1,14 @@
 library(spotifyr)
 library(tidyverse)
 
-id <- 'my_id'
-secret <- 'my_secret'
+# Method for working within 50-item API limit taken from:
+# https://rpubs.com/womeimingzi11/how_my_spotify_looks_like
+
+id <- 'my_client_id' # client ID from Spotify developer dashboard
+secret <- 'my_client_secret' # client secret from Spotify developer dashboard
 Sys.setenv(SPOTIFY_CLIENT_ID = id)
 Sys.setenv(SPOTIFY_CLIENT_SECRET = secret)
 access_token <- get_spotify_access_token()
-
-# Method for working within 50-item API limit taken from:
-# https://rpubs.com/womeimingzi11/how_my_spotify_looks_like
 
 # Export a list of all songs from my playlists to CSV
 
